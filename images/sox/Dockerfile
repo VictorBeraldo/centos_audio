@@ -1,10 +1,5 @@
 FROM centos:7
 
-## SOX
-
-# install wget,make
-RUN yum -y install wget makeFROM centos:7
-
 # install wget,make
 RUN yum -y install wget make
 
@@ -24,14 +19,4 @@ RUN wget https://nchc.dl.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2.tar.g
     make -s &&\
     make install
 
-
-# FMMPEG
-
-# install EPEL software repository
-RUN yum -y install epel-release
-
-# install RPM Fusion repository
-RUN yum -y localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
-
-# install ffmpeg
-RUN yum -y install ffmpeg ffmpeg-devel
+    
