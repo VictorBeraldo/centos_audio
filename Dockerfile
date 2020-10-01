@@ -3,9 +3,6 @@ FROM centos:7
 ## SOX
 
 # install wget,make
-RUN yum -y install wget makeFROM centos:7
-
-# install wget,make
 RUN yum -y install wget make
 
 # install RPMS
